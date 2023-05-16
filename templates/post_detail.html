@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 
+{% block title %}{{ post.title }}{% endblock %}
+
 {% block content %}
-    <h1>{{ post.title }}</h1>
-    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid mb-4">
-    <p>{{ post.information_text }}</p>
+  <h1>{{ post.title }}</h1>
+  <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid mb-3">
+  <p>{{ post.information_text  }}</p>
+  <a href="{% url 'blog:post_list' %}" class="btn btn-primary">Back to Posts</a>
 {% endblock %}
