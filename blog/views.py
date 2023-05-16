@@ -8,6 +8,7 @@ class PostList(ListView):
     template_name = '../templates/post_list.html'
     image = models.ImageField(upload_to='images/')
     context_object_name = "posts"
+    paginate_by = 2
 
 
 class PostDetail(DetailView):
