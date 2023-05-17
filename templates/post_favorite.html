@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}My favorite curves{% endblock title %}
+{% block content %}
+    <div class="container-fluid">
+        <main class="tm-main">
+            <div class="row tm-row">
+                {% for post in post_f %}
+                    {% if post.favorite %}
+                        <article class="col-12 col-md-6 tm-post">
+                            <hr class="tm-hr-primary">
+                            <a href="{% url "blog:post_detail" post.id %}" class="effect-lily tm-post-link tm-pt-60">
+                                <div class="tm-post-link-inner">
+                                    <img src={{ post.image.url }} alt="Image" class="img-fluid">
+                                </div>
+                                <h2 class="tm-pt-30 tm-color-primary tm-post-title">{{ post.title }}</h2>
+                            </a>
+                            <p class="tm-pt-30">
+                                {{ post.information_text|truncatewords:15 }}
+                            </p>
+                            <div class="d-flex justify-content-between tm-pt-45">
+                                <span class="tm-color-primary">Publish Date</span>
+                                <span class="tm-color-primary">{{ post.publish_date }}</span>
+                            </div>
+                            <hr>
+                        </article>
+                    {% endif %}
+                {% endfor %}
+                <nav class="tm-paging-nav d-inline-block">
+                    <ul>
+                        <li>
+
+                            {% if page_obj.has_previous %}
+                                <a href="?page={{ page_obj.previous_page_number }}"
+                                   class="mb-2 tm-btn tm-btn-primary tm-prev-next">Prev</a>
+                            {% endif %}
+                        </li>
+                        <li class="tm-paging-item active">
+                            <a href="#" class="mb-2 tm-btn tm-paging-link">{{ page_obj.number }}</a>
+                        </li>
+                        <li>
+                            <div class="tm-prev-next-wrapper">
+                                {% if  page_obj.has_next %}
+                                    <a href="?page={{ page_obj.next_page_number }}"
+                                       class="mb-2 tm-btn tm-btn-primary tm-prev-next">Next</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </main>
+
+    </div>
+
+
+{% endblock content %}

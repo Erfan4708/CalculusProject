@@ -1,10 +1,67 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
-  <h1>{{ post.title }}</h1>
-  <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid mb-3">
-  <p>{{ post.information_text  }}</p>
-  <a href="{% url 'blog:post_list' %}" class="btn btn-primary">Back to Posts</a>
+    <div class="container-fluid">
+        <main class="tm-main">
+            <div class="row tm-row">
+                <div class="col-12">
+                    <hr class="tm-hr-primary tm-mb-55">
+                    <!-- Video player 1422x800 -->
+                    <img src={{ post.image.url }} width="954" height="535" controls class="tm-mb-40">
+
+                </div>
+            </div>
+            <div class="row tm-row">
+                <div class="col-lg-8 tm-post-col">
+                    <div class="tm-post-full">
+                        <div class="mb-4">
+                            <h1 class="pt-2 tm-color-primary tm-post-title">{{ post.title }}</h1>
+                            <p class="tm-mb-40">{{ post.publish_date }}</p>
+                            <p>
+                                {{ post.information_text|linebreaks }}
+                            </p>
+                            <form method="post">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+
+                                {#                                <div class="form-check form-switch">#}
+                                {#                                    <input class="form-check-input" type="checkbox" role="switch"#}
+                                {#                                           id="flexSwitchCheckDefault">#}
+                                {#                                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox#}
+                                {#                                        input</label>#}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            {#                <aside class="col-lg-4 tm-aside-col">#}
+            {#                    <div class="tm-post-sidebar">#}
+            {#                        <hr class="mb-3 tm-hr-primary">#}
+            {#                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Other curves</h2>#}
+            {##}
+            {#                        {% for post in posts %}#}
+            {#                            <a href="#" class="d-block tm-mb-40">#}
+            {#                                <figure>#}
+            {#                                    <img src={{ post.image.url }} alt="Image" class="mb-3 img-fluid">#}
+            {#                                    <figcaption class="tm-color-primary">{{ post.title }}</figcaption>#}
+            {#                                </figure>#}
+            {#                            </a>#}
+            {#                        {% endfor %}#}
+            {##}
+            {#                    </div>#}
+            {#                </aside>#}
+    </div>
+    <footer class="row tm-row">
+        <div class="col-md-6 col-12 tm-color-gray">
+            Design: <a rel="nofollow" target="_parent" href="https://templatemo.com"
+                       class="tm-external-link">TemplateMo</a>
+        </div>
+    </footer>
+    </main>
+    </div>
 {% endblock %}

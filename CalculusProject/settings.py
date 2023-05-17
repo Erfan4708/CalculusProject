@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'crispy_bootstrap4',
+    'crispy_forms',
+    
     'blog',
 ]
 
@@ -124,3 +128,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
