@@ -5,32 +5,31 @@
 {% endblock page_title %}
 
 {% block content %}
-    <div class="container-fluid">
-        <main class="tm-main">
-            <div class="row tm-row">
-                <div class="d-flex justify-content-center mt-5" dir="rtl">
-                    <div class="col-xl-3 col-lg-4 col-md-5 col-sm-5 col-xs-6 bg-white m-3 m-sm-5 border rounded px-4 pt-4 pb-3 shadow">
-                        <form method="post">
-                            {% csrf_token %}
-                            <h1 class="text-center">Log In</h1>
-                            {{ form|crispy }}
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="mt-2">
-                                    <a class="text-decoration-none" href="{% url 'password_reset' %}">Forget password</a>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-success mt-3 w-100">LogIn</button>
-                            <div class="line-with-middle-sep">
+    <div class="barber_section layout_padding">
+    <div class="container">
+        <div class="d-flex justify-content-center" dir="rtl">
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-xs-7 bg-white m-4 m-sm-6 border rounded px-5 pt-5 pb-4 shadow">
+                <form method="post">
+                    {% csrf_token %}
+                    <h1 class="text-center subscribe_text" style="color: black">Log In</h1>
+                    {{ form|crispy }}
+                    <div class="d-flex justify-content-between align-items-center">
+{#                        <div class="mt-2">#}
+{#                            <a class="text-decoration-none" href="{% url 'password_reset' %}">Forget password</a>#}
+{#                        </div>#}
+                    </div>
+                    <button style="background-color: #727272" type="submit" class="btn btn-success mt-3 w-100">LogIn</button>
+                    <div class="line-with-middle-sep text-center">
                                   <span>
                                     Or
                                   </span>
-                            </div>
-                            <a href="{% url 'signup' %}" class="btn btn-primary mt-2 mb-3 w-100" >Sign Up</a>
-                        </form>
                     </div>
-
-                </div>
+                    <a style="background-color: black" href="{% url 'signup' %}" class="btn btn-primary mt-2 mb-3 w-100">Sign Up</a>
+                </form>
             </div>
-        </main>
+
+        </div>
     </div>
+    </div>
+
 {% endblock content %}

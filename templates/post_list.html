@@ -18,7 +18,7 @@
                                 <h1 class="barber_taital">{{ post.title|capfirst }}</h1>
                                 <p class="barber_text">{{ post.information_text|truncatewords:90 }}</p>
                                 <div class="blogr_right">
-                                    <a href="{% url 'blog:post_detail' post.id %}" class="btn btn-custom">Read
+                                    <a href="{% url 'blog:post_detail' post.id %}" class="btn btn-custom font-weight-bold text-center ">Read
                                         More!</a>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                                 <a class="page-link" href="#" tabindex="-1">Previous</a>
                             </li>
                         {% endif %}
-                        <li class="page-item"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
                         {% if page_obj.has_next %}
                             <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">{{ page_obj.number|add:1 }}</a>
                             </li>
