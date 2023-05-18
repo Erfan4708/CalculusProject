@@ -21,8 +21,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <!-- Responsive-->
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-{#    <!-- fevicon -->#}
-{#    <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif"/>#}
+    {#    <!-- fevicon -->#}
+    {#    <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif"/>#}
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
     <!-- Tweaks for older IEs-->
@@ -44,17 +44,17 @@
     <div class="navbar subscribe_text">
         <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin: auto">
             <li class="nav-item">
-                <a style="color: white" class="nav-link" href="#">Home</a>
+                <a style="color: white" class="nav-link" href="{% url "blog:post_list" %}">Home</a>
             </li>
             <li class="nav-item">
-                <a style="color: white" class="nav-link" href="#">My Favorites</a>
+                <a style="color: white" class="nav-link" href="{% url "blog:post_favorite" %}">My Favorites</a>
             </li>
             <li class="nav-item dropdown">
                 <a style="color: white" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                    aria-haspopup="true" aria-expanded="false">Registration</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Sign Up</a>
-                    <a class="dropdown-item" href="#">Log in</a>
+                    <a class="dropdown-item" href="{% url "signup" %}">Sign Up</a>
+                    <a class="dropdown-item" href="{% url "login" %}">Log in</a>
                 </div>
             </li>
         </ul>
@@ -64,22 +64,6 @@
 {% endblock %}
 
 <div class="footer_section layout_padding">
-
-    <div class="navbar subscribe_text">
-        <nav aria-label="Page navigation example" style="margin: auto">
-            <ul class="pagination justify-content-end">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
 
     <div class="container">
 
