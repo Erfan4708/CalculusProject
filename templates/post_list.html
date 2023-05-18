@@ -1,59 +1,134 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Curves{% endblock title %}
 {% block content %}
-    <div class="container-fluid">
-        <main class="tm-main">
-            <div class="row tm-row">
-                {% for post in posts %}
-                    <article class="col-12 col-md-6 tm-post">
-                        <hr class="tm-hr-primary">
-                        <a href="{% url "blog:post_detail" post.id %}" class="effect-lily tm-post-link tm-pt-60">
-                            <div class="tm-post-link-inner">
-                                <img src={{ post.image.url }} alt="Image" class="img-fluid">
+    <div class="barber_section layout_padding">
+    <div class="container">
+        <div class="braber_taital_main">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="barber_bg_main">
+                        <h1 class="barber_taital">Jhonson Barber is</h1>
+                        <p class="barber_text">It is a long established fact that a reader will be distracted by the
+                            readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+                            that it has a more-or-less normal distribution of letters, as opposed to using 'Content
+                            here, content here', making it look like readable English. Many desktop publishing packages
+                            and web page editors now use Lorem Ipsum as their default model text, and a search for
+                            'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+                            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the
+                            lik</p>
+                        <div class="blogr_main">
+                            <div class="blogr_left">
+                                <p class="post_text">Post By : Blogr</p>
                             </div>
-                            <h2 class="tm-pt-30 tm-color-primary tm-post-title">{{ post.title }}</h2>
-                        </a>
-                        <p class="tm-pt-30">
-                            {{ post.information_text|truncatewords:15 }}
-                        </p>
-                        <hr>
-                        {#                        <div class="d-flex justify-content-between">#}
-                        {#                            <span>36 comments</span>#}
-                        {#                            <span>by Admin Nat</span>#}
-                        {#                        </div>#}
-                    </article>
-                {% endfor %}
-            </div>
-            {#            <div class="row tm-row tm-mt-100 tm-mb-75">#}
-            {##}
-            {#                <div class="tm-paging-wrapper">#}
-            {#            <span class="d-inline-block mr-3">Page</span>#}
-            <nav class="tm-paging-nav d-inline-block">
-                <ul>
-                    <li>
-
-                        {% if page_obj.has_previous %}
-                            <a href="?page={{ page_obj.previous_page_number }}"
-                               class="mb-2 tm-btn tm-btn-primary tm-prev-next">Prev</a>
-                        {% endif %}
-                    </li>
-                    <li class="tm-paging-item active">
-                        <a href="#" class="mb-2 tm-btn tm-paging-link">{{ page_obj.number }}</a>
-                    </li>
-                    <li>
-                        <div class="tm-prev-next-wrapper">
-                            {% if  page_obj.has_next %}
-                                <a href="?page={{ page_obj.next_page_number }}"
-                                   class="mb-2 tm-btn tm-btn-primary tm-prev-next">Next</a>
-                            {% endif %}
+                            <div class="blogr_right">
+                                <div class="comment_text">
+                                    <ul>
+                                        <li><a href="#">Like<span class="padding_10"><i
+                                                class="fa fa-thumbs-up"></i></span></a></li>
+                                        <li><a href="#">Comment<span class="padding_10"><i
+                                                class="fa fa-comment"></i></span></a></li>
+                                        <li><a href="#">Share<span class="padding_10"><i class="fa fa-share-alt"
+                                                                                         aria-hidden="true"></i></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                </ul>
-            </nav>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="fashion_img">
+                        <img src="{% static 'images/img-1.png'%}" class="fashion_img">
+                        <div class="read_bt"><a href="#">04<br>FEB</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="braber_taital_main">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="barber_bg_main">
+                        <h1 class="barber_taital">Save Plants and save life</h1>
+                        <p class="barber_text">It is a long established fact that a reader will be distracted by the
+                            readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+                            that it has a more-or-less normal distribution of letters, as opposed to using 'Content
+                            here, content here', making it look like readable English. Many desktop publishing packages
+                            and web page editors now use Lorem Ipsum as their default model text, and a search for
+                            'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+                            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the
+                            lik</p>
+                        <div class="blogr_main">
+                            <div class="blogr_left">
+                                <p class="post_text">Post By : Blogr</p>
+                            </div>
+                            <div class="blogr_right">
+                                <div class="comment_text">
+                                    <ul>
+                                        <li><a href="#">Like<span class="padding_10"><i
+                                                class="fa fa-thumbs-up"></i></span></a></li>
+                                        <li><a href="#">Comment<span class="padding_10"><i
+                                                class="fa fa-comment"></i></span></a></li>
+                                        <li><a href="#">Share<span class="padding_10"><i class="fa fa-share-alt"
+                                                                                         aria-hidden="true"></i></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="fashion_img">
+                        <img src="{% static 'images/img-2.png' %}" class="fashion_img">
+                        <div class="read_bt"><a href="#">05<br>FEB</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="braber_taital_main">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="barber_bg_main">
+                        <h1 class="barber_taital">Fashion New Model</h1>
+                        <p class="barber_text">It is a long established fact that a reader will be distracted by the
+                            readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+                            that it has a more-or-less normal distribution of letters, as opposed to using 'Content
+                            here, content here', making it look like readable English. Many desktop publishing packages
+                            and web page editors now use Lorem Ipsum as their default model text, and a search for
+                            'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+                            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the
+                            lik</p>
+                        <div class="blogr_main">
+                            <div class="blogr_left">
+                                <p class="post_text">Post By : Blogr</p>
+                            </div>
+                            <div class="blogr_right">
+                                <div class="comment_text">
+                                    <ul>
+                                        <li><a href="#">Like<span class="padding_10"><i
+                                                class="fa fa-thumbs-up"></i></span></a></li>
+                                        <li><a href="#">Comment<span class="padding_10"><i
+                                                class="fa fa-comment"></i></span></a></li>
+                                        <li><a href="#">Share<span class="padding_10"><i class="fa fa-share-alt"
+                                                                                         aria-hidden="true"></i></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div>
+                        <img src="{% static 'images/img-3.png' %}" class="fashion_img">
+                        <div class="read_bt"><a href="#">05<br>FEB</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    </main>
-    </div>
-
-
+</div>
 {% endblock content %}
