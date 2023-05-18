@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 {% block title %}{{ post.title }}{% endblock %}
@@ -9,9 +10,7 @@
             <div class="row tm-row">
                 <div class="col-12">
                     <hr class="tm-hr-primary tm-mb-55">
-                    <!-- Video player 1422x800 -->
-                    <img src={{ post.image.url }} width="954" height="535" controls class="tm-mb-40">
-
+                    <img src="{{ post.image.url }}" width="954" height="535" controls class="tm-mb-40">
                 </div>
             </div>
             <div class="row tm-row">
@@ -26,42 +25,12 @@
                             <form method="post">
                                 {% csrf_token %}
                                 {{ form.as_p }}
-
-                                {#                                <div class="form-check form-switch">#}
-                                {#                                    <input class="form-check-input" type="checkbox" role="switch"#}
-                                {#                                           id="flexSwitchCheckDefault">#}
-                                {#                                    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox#}
-                                {#                                        input</label>#}
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </form>
                         </div>
-                        <button type="submit" class="btn btn-primary">Save</button>
-                        </form>
                     </div>
                 </div>
             </div>
-
-            {#                <aside class="col-lg-4 tm-aside-col">#}
-            {#                    <div class="tm-post-sidebar">#}
-            {#                        <hr class="mb-3 tm-hr-primary">#}
-            {#                        <h2 class="tm-mb-40 tm-post-title tm-color-primary">Other curves</h2>#}
-            {##}
-            {#                        {% for post in posts %}#}
-            {#                            <a href="#" class="d-block tm-mb-40">#}
-            {#                                <figure>#}
-            {#                                    <img src={{ post.image.url }} alt="Image" class="mb-3 img-fluid">#}
-            {#                                    <figcaption class="tm-color-primary">{{ post.title }}</figcaption>#}
-            {#                                </figure>#}
-            {#                            </a>#}
-            {#                        {% endfor %}#}
-            {##}
-            {#                    </div>#}
-            {#                </aside>#}
-    </div>
-    <footer class="row tm-row">
-        <div class="col-md-6 col-12 tm-color-gray">
-            Design: <a rel="nofollow" target="_parent" href="https://templatemo.com"
-                       class="tm-external-link">TemplateMo</a>
-        </div>
-    </footer>
-    </main>
+        </main>
     </div>
 {% endblock %}
