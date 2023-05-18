@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block page_title %}
+    Sign Up
+{% endblock page_title %}
+
+{% block content %}
+    <div class="barber_section layout_padding">
+    <div class="container">
+        <div class="d-flex justify-content-center" dir="rtl">
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-xs-7 bg-white m-4 m-sm-6 border rounded px-5 pt-5 pb-4 shadow">
+                <form method="post">
+                    {% csrf_token %}
+                    <h1 class="text-center subscribe_text" style="color: black">Sign Up</h1>
+                    {{ form|crispy }}
+                    <button style="background-color: black" type="submit" class="btn btn-success mt-3 w-100">Signup</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+{% endblock content %}

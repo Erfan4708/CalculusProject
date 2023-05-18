@@ -1,0 +1,488 @@
+/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header-search {
+        padding: 15px 0px;
+    }
+}
+
+
+/*------------------------------------------------------------------- 767px x 599px ---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 599px) and (max-width: 767px) {
+    .logo {
+        text-align: center;
+    }
+    .cart-content-right {
+        padding-bottom: 5px;
+    }
+    .mg {
+        margin: 0px 0px;
+    }
+    .menu-area-main {
+        height: 256px;
+        overflow-y: auto;
+    }
+    .megamenu>.row [class*="col-"] {
+        padding: 0px;
+    }
+    .menu-area-main .megamenu .men-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .women-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .el-cat {
+        padding: 0px 15px;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        height: 19px;
+    }
+    .category-box.women-box {
+        display: none;
+    }
+    .cart-box {
+        display: inline-block;
+        margin: 0px 30px;
+    }
+    .wish-box {
+        float: none;
+        margin: 0px 30px;
+        display: inline-block;
+    }
+    .menu-add {
+        display: none;
+    }
+    .category-box {
+        display: none;
+    }
+    .mean-container .mean-nav ul li ol {
+        padding: 0px;
+    }
+    .mean-container .mean-nav ul li a {
+        padding: 10px 20px;
+        width: 94.8%;
+    }
+    .mean-container .mean-nav ul li li a {
+        width: 92%;
+        padding: 1em 4%;
+    }
+    .mean-container .mean-nav ul li li li a {
+        width: 100%;
+    }
+    .header-search {
+        padding: 15px 0px;
+    }
+    #collapseFilter.d-md-block {
+        padding: 30px 0px;
+    }
+}
+
+
+/*------------------------------------------------------------------- 599px x 280px ---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+    .cart-content-right {
+        padding-bottom: 5px;
+    }
+    .megamenu>.row [class*="col-"] {
+        padding: 0px;
+    }
+    .menu-area-main .megamenu .men-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .women-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .el-cat {
+        padding: 0px 15px;
+    }
+    .mean-container .mean-nav ul li a {
+        padding: 1em 4%;
+        width: 92%;
+    }
+    .mean-container .mean-nav ul li li a {
+        width: 90%;
+        padding: 1em 5%;
+    }
+    .mean-container .sub-full.megamenu-categories ol li a {
+        padding: 5px 0px;
+        text-transform: capitalize;
+        width: 100%;
+    }
+    .megamenu .sub-full.megamenu-categories .women-box .banner-up-text a {
+        width: auto;
+        border: none;
+        float: none;
+    }
+    .menu-area-main {
+        height: 45px;
+        overflow-y: auto;
+    }
+    .mean-container .mean-nav ul li a.mean-expand {
+        top: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header_section::before {
+        width: 350px;
+        height: 660px;
+    }
+    .header_section::after {
+        width: 650px;
+        height: 700px;
+        background-image: linear-gradient( 0deg, #eaeaea 53%, #fff 56%);
+    }
+    .banner_img {
+        width: 80%;
+    }
+    #main_slider a.carousel-control-prev {
+        position: absolute;
+        left: -161px;
+        top: 30%;
+    }
+    #main_slider a.carousel-control-next {
+        position: absolute;
+        right: -29px;
+        top: 30%;
+    }
+    .design_taital {
+        width: 50%;
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .barber_text {
+        font-size: 14px;
+    }
+    .comment_text {
+        width: 100%;
+    }
+    .comment_text li {
+        font-size: 17px;
+    }
+    .post_text {
+        font-size: 17px;
+    }
+    .barber_taital {
+        padding-top: 0px;
+    }
+    .post_text {
+        margin: 35px 0px 0px 0px;
+    }
+    .about_section {
+        background-size: 100% 100%;
+    }
+    .read_bt {
+        top: 35%;
+    }
+    .fashion_img {
+        height: 425px;
+    }
+    .testimonial_taital_main {
+        margin-top: 40px;
+    }
+    #my_slider a.carousel-control-prev {
+        position: absolute;
+        left: 370px;
+        top: 59%;
+    }
+    .contact_taital {
+        padding: 40px 0px;
+    }
+    .footer_menu li {
+        font-size: 14px;
+        padding: 0px 10px;
+    }
+    .social_icon li {
+        padding-left: 10px;
+    }
+    .input_bt {
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .header_section::before {
+        width: 350px;
+        height: 590px;
+    }
+    .header_section::after {
+        width: 420px;
+        height: 630px;
+        background-image: linear-gradient( 0deg, #eaeaea 53%, #fff 56%);
+    }
+    #main_slider a.carousel-control-prev {
+        position: absolute;
+        left: -50px;
+        top: 48%;
+    }
+    #main_slider a.carousel-control-next {
+        position: absolute;
+        right: -39px;
+        top: 48%;
+    }
+    .design_taital {
+        width: 50%;
+        font-size: 40px;
+        line-height: 47px;
+    }
+    .comment_text {
+        width: 55%;
+    }
+    .blogr_right {
+        width: 80%;
+    }
+    .about_section {
+        background-size: 100% 100%;
+    }
+    .testimonial_taital_main {
+        margin-top: 40px;
+    }
+    #my_slider a.carousel-control-prev {
+        position: absolute;
+        left: 610px;
+        top: 61%;
+    }
+    .footer_menu li {
+        font-size: 14px;
+        padding: 0px 10px;
+    }
+    .social_icon li {
+        padding-left: 10px;
+    }
+    .input_bt {
+        width: 60%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    #main_slider a.carousel-control-prev {
+        position: absolute;
+        left: 175px;
+        top: 105%;
+        display: none;
+    }
+    #main_slider a.carousel-control-next {
+        position: absolute;
+        left: 236px;
+        top: 105%;
+        display: none;
+    }
+    #my_slider a.carousel-control-next {
+        position: absolute;
+        right: 80px;
+        top: 80%;
+        display: none;
+    }
+    #my_slider a.carousel-control-prev {
+        position: absolute;
+        right: 80px;
+        top: 80%;
+        display: none;
+    }
+    .header_section::before {
+        background-color: rgba(10, 10, 13, 0.1);
+        height: 870px;
+    }
+    .header_section::after {
+        display: none;
+    }
+    .header_section {
+        background-size: cover;
+    }
+    .shoping_bag {
+        display: none;
+    }
+    .design_taital {
+        width: 70%;
+        padding-top: 0px;
+    }
+    .banner_section {
+        padding-bottom: 60px;
+    }
+    .barber_bg_main {
+        padding: 20px 20px 20px 20px;
+    }
+    .barber_taital {
+        font-size: 26px;
+    }
+    .barber_text {
+        font-size: 14px;
+    }
+    .comment_text li {
+        font-size: 17px;
+    }
+    .post_text {
+        font-size: 17px;
+    }
+    .read_bt {
+        top: 40%;
+    }
+    .about_section {
+        background-size: 100% 100%;
+    }
+    .about_text {
+        font-size: 14px;
+    }
+    .testimonial_taital_main {
+        margin-top: 40px;
+    }
+    .testimonial_taital_main {
+        width: 100%;
+        padding: 20px;
+    }
+    .jack_text {
+        padding-top: 0px;
+    }
+    .footer_menu li {
+        font-size: 12px;
+        padding: 20px 5px;
+        padding-bottom: 20px;
+    }
+    .footer_main {
+        display: initial;
+    }
+    .footer_logo {
+        text-align: center;
+    }
+    .social_icon {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .social_icon ul {
+        display: inline-block;
+        text-align: center;
+    }
+    .input_bt {
+        width: 100%;
+    }
+    .location_text li {
+        padding: 0px 30px 10px 0px;
+    }
+}
+
+@media (max-width: 575px) {
+    #main_slider a.carousel-control-prev {
+        position: absolute;
+        left: 175px;
+        top: 105%;
+        display: none;
+    }
+    #main_slider a.carousel-control-next {
+        position: absolute;
+        left: 236px;
+        top: 105%;
+        display: none;
+    }
+    #my_slider a.carousel-control-next {
+        position: absolute;
+        right: 80px;
+        top: 80%;
+        display: none;
+    }
+    #my_slider a.carousel-control-prev {
+        position: absolute;
+        right: 80px;
+        top: 80%;
+        display: none;
+    }
+    .header_section::before {
+        background-color: rgba(10, 10, 13, 0.1);
+        height: 870px;
+    }
+    .header_section::after {
+        display: none;
+    }
+    .header_section {
+        background-size: cover;
+    }
+    .shoping_bag {
+        display: none;
+    }
+    .design_taital {
+        width: 70%;
+        padding-top: 0px;
+    }
+    .banner_section {
+        padding-bottom: 60px;
+    }
+    .barber_bg_main {
+        padding: 20px 20px 20px 20px;
+    }
+    .barber_taital {
+        font-size: 20px;
+    }
+    .barber_text {
+        font-size: 14px;
+    }
+    .blogr_main {
+        display: initial;
+    }
+    .comment_text {
+        width: 100%;
+    }
+    .blogr_right {
+        width: 100%;
+        padding-top: 0px;
+    }
+    .comment_text li {
+        font-size: 15px;
+        padding: 0px 10px 0px 0px;
+    }
+    .post_text {
+        font-size: 15px;
+        margin: 15px 0px;
+    }
+    .read_bt {
+        top: 30%;
+    }
+    .about_section {
+        background-size: 100% 100%;
+    }
+    .about_text {
+        font-size: 14px;
+    }
+    .testimonial_taital_main {
+        margin-top: 40px;
+    }
+    .testimonial_taital_main {
+        width: 100%;
+        padding: 20px;
+    }
+    .jack_text {
+        padding-top: 0px;
+    }
+    .footer_menu li {
+        font-size: 12px;
+        padding: 20px 5px;
+        padding-bottom: 20px;
+    }
+    .footer_main {
+        display: initial;
+    }
+    .footer_logo {
+        text-align: center;
+    }
+    .social_icon {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .social_icon ul {
+        display: inline-block;
+        text-align: center;
+    }
+    .input_bt {
+        width: 100%;
+    }
+    .location_text li {
+        padding: 0px 30px 10px 0px;
+    }
+}
