@@ -9,14 +9,16 @@
         <div class="container-fluid">
 
             <main class="tm-main">
+                    <div class="text-center">
+                        {{ post.html_content|safe }}
+                    </div>
                 <div class="col-lg-6" style="margin: auto">
                     <div class="mb-5">
                         <h1 style="font-size: xxx-large" class="font-weight-bold">{{ post.title|capfirst }}</h1>
-                        <p style="font-size: larger" class="tm-mb-40">{{ post.publish_date }}</p>
                         <p>
                             {{ post.information_text|linebreaks }}
                         </p>
-                        {{ post.html_content|safe }}
+
                         {% if user.is_authenticated %}
                             <div class="subscribe_text font-weight-bold">
                                 <form method="post" style="color: black">
