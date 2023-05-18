@@ -11,6 +11,7 @@ class Post(models.Model):
     publish_date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     favorite = models.BooleanField(default=False)
+    html_content = models.TextField(blank=True)
 
     def __str__(self):
         return self.title
