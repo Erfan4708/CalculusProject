@@ -47,7 +47,7 @@
                 <a style="color: white" class="nav-link" href="{% url "blog:post_list" %}">Home</a>
             </li>
             <li class="nav-item">
-                <a style="color: white" class="nav-link" href="{% url "blog:post_favorite" %}">My Favorites</a>
+                <a style="color: white" class="nav-link" href="{% url "blog:favorite_list" %}">My Favorites</a>
             </li>
             {% if user.is_authenticated %}
                 <li class="nav-item dropdown">

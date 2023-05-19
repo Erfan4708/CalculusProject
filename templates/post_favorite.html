@@ -1,64 +1,81 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% block title %}My favorite curves{% endblock title %}
 {% block content %}
-    <div class="barber_section layout_padding">
-        <div class="container">
-            {% for post in post_f %}
-                <div class="braber_taital_main">
-                    <div class="row">
+    {% if user.is_authenticated %}
 
-                        <div>
-                            <div class="barber_bg_main">
-                                <div class="text-center">
-                                    <div class="fashion_img">
-                                        <img src="{{ post.image.url }}">
+        <div class="barber_section layout_padding">
+            <div class="container">
+                {% for post in post_f %}
+                    {% if post.user.username ==  user.username %}
+                    <div class="braber_taital_main">
+                        <div class="row">
+                            <div>
+                                <div class="barber_bg_main">
+                                    <div class="text-center">
+                                        <div class="fashion_img">
+                                            <img src="{{ post.post.image.url }}">
+                                        </div>
+                                    </div>
+                                    <h1 class="barber_taital">{{ post.post.title|capfirst }}</h1>
+                                    <p class="barber_text">{{ post.post.information_text|truncatewords:90 }}</p>
+                                    <div class="blogr_right">
+                                        <a href="{% url 'blog:post_detail' post.post.id %}"
+                                           class="btn btn-custom font-weight-bold text-center ">Read
+                                            More!</a>
                                     </div>
                                 </div>
-                                <h1 class="barber_taital">{{ post.title|capfirst }}</h1>
-                                <p class="barber_text">{{ post.information_text|truncatewords:90 }}</p>
-                                <div class="blogr_right">
-                                    <a href="{% url 'blog:post_detail' post.id %}"
-                                       class="btn btn-custom font-weight-bold text-center ">Read
-                                        More!</a>
-                                </div>
                             </div>
+                            {#////////////////////////////////#}
                         </div>
-                        {#////////////////////////////////#}
                     </div>
+                    {% endif %}
+                {% endfor %}
+                <div class="navbar subscribe_text">
+                    <nav aria-label="Page navigation example" style="margin: auto">
+                        <ul class="pagination justify-content-end">
+                            {% if page_obj.has_previous %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Previous</a>
+                                <li class="page-item"><a class="page-link"
+                                                         href="?page={{ page_obj.previous_page_number }}">{{ page_obj.number|add:-1 }}</a>
+                                </li>
+                                </li>
+                            {% else %}
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                            {% endif %}
+                            <li class="page-item active"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
+                            {% if page_obj.has_next %}
+                                <li class="page-item"><a class="page-link"
+                                                         href="?page={{ page_obj.next_page_number }}">{{ page_obj.number|add:1 }}</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ page_obj.next_page_number }}"
+                                       tabindex="-1">Next</a>
+                                </li>
+                            {% else %}
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Next</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
                 </div>
-            {% endfor %}
-            <div class="navbar subscribe_text">
-                <nav aria-label="Page navigation example" style="margin: auto">
-                    <ul class="pagination justify-content-end">
-                        {% if page_obj.has_previous %}
-                            <li class="page-item">
-                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Previous</a>
-                            <li class="page-item"><a class="page-link"
-                                                     href="?page={{ page_obj.previous_page_number }}">{{ page_obj.number|add:-1 }}</a>
-                            </li>
-                            </li>
-                        {% else %}
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                            </li>
-                        {% endif %}
-                        <li class="page-item active"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
-                        {% if page_obj.has_next %}
-                            <li class="page-item"><a class="page-link"
-                                                     href="?page={{ page_obj.next_page_number }}">{{ page_obj.number|add:1 }}</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="?page={{ page_obj.next_page_number }}"
-                                   tabindex="-1">Next</a>
-                            </li>
-                        {% else %}
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">Next</a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </nav>
             </div>
         </div>
-    </div>
+    {% else %}
+        <div style="margin-top: 180px" class=" subscribe_text">
+        <h1 class="caption">You must log in to your account to save a post to favorites.  </h1>
+        <a href="{% url 'login' %}">login</a> | <a href="{% url 'signup' %}">signup</a>
+        </div>
+        <div  class="subscribe_text">
+            <h1 style="color: white">---------------------------------------------------------------</h1>
+            <h1 style="color: white">---------------------------------------------------------------</h1>
+            <h1 style="color: white">---------------------------------------------------------------</h1>
+            <h1 style="color: white">---------------------------------------------------------------</h1>
+        </div>
+    {% endif %}
+
 {% endblock content %}

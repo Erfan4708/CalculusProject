@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post ,Favoritepost
 
 
 class PostForm(forms.ModelForm):
@@ -8,5 +8,10 @@ class PostForm(forms.ModelForm):
         fields = ('favorite',)
 
 
-class FavoriteForm(forms.Form):
-    favorite = forms.BooleanField(required=False)
+# class FavoriteForm(forms.Form):
+#     favorite = forms.BooleanField(required=False)
+
+# from django import forms
+
+# class AddToFavoritesForm(forms.Form):
+#     book_id = forms.IntegerField(widget=forms.HiddenInput)
