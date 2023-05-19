@@ -1,3 +1,5 @@
+
+
 from .models import Post ,Favoritepost
 from django.views.generic import ListView , DeleteView
 from django.shortcuts import get_object_or_404, render , redirect
@@ -39,3 +41,15 @@ class FavoriteList(ListView):
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, '../templates/post_detail.html', {'post': post})
+
+
+
+
+
+
+
+
+
+
+
+

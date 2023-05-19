@@ -139,6 +139,7 @@ LOGOUT_REDIRECT_URL = 'blog:post_list'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+
 from django.contrib.messages import constants as messages
 
 
@@ -149,5 +150,4 @@ MESSAGE_TAGS = {
         messages.WARNING: 'alert-warning',
         messages.ERROR: 'alert-danger',
  }
-
 
