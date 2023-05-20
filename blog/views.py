@@ -11,7 +11,7 @@ class PostList(ListView):
     model = Post
     template_name = '../templates/post_list.html'
     context_object_name = "posts"
-    paginate_by = 6
+    paginate_by = 4
 def add_favorite(request,user,post_id):
     post = get_object_or_404(Post, pk=post_id)
     Favoritepost.objects.create(user=request.user, post=post)
@@ -35,12 +35,14 @@ class FavoriteList(ListView):
     model = Favoritepost
     template_name = 'post_favorite.html'
     context_object_name = 'post_f'
-    paginate_by = 6
+    paginate_by = 4
+
 
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, '../templates/post_detail.html', {'post': post})
+
 
 
 

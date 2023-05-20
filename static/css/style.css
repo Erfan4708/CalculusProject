@@ -131,8 +131,9 @@ ol {
 p {
     margin: 20px;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 150px;
     line-height: 24px;
+    text-align: right;
 }
 
 a {
