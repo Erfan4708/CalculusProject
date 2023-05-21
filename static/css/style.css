@@ -1,6 +1,5 @@
 /*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 
-
 /*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
@@ -9,7 +8,6 @@
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
  2) font-family: 'Poppins', sans-serif;
  ----------------------------------------*****/
-
 
 /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
 
@@ -112,7 +110,7 @@ h4 a,
 h5 a,
 h6 a {
     color: #212121;
-    text-decoration: none!important;
+    text-decoration: none !important;
     opacity: 1
 }
 
@@ -131,9 +129,10 @@ ol {
 p {
     margin: 20px;
     font-weight: 300;
-    font-size: 150px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 45px;
     text-align: right;
+    font-family: iransans;
 }
 
 a {
@@ -158,7 +157,7 @@ img {
     height: auto;
 }
 
- :focus {
+:focus {
     outline: 0;
 }
 
@@ -237,7 +236,7 @@ button {
     content: '';
     width: 1230px;
     height: 960px;
-    background-image: linear-gradient( 0deg, #eaeaea 43%, #fff 45%);
+    background-image: linear-gradient(0deg, #eaeaea 43%, #fff 45%);
     left: initial;
     right: 0px;
     top: 0px;
@@ -918,7 +917,7 @@ textarea#comment::placeholder {
 }
 
 .btn-outline-secondary:not(:disabled):not(.disabled):active,
-.show>.btn-outline-secondary.dropdown-toggle {
+.show > .btn-outline-secondary.dropdown-toggle {
     color: #fff;
     background-color: #9ccd3c !important;
     border-color: #9ccd3c !important;
@@ -940,7 +939,7 @@ textarea#comment::placeholder {
 
 .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
 .btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
-.show>.btn-outline-secondary.dropdown-toggle:focus {
+.show > .btn-outline-secondary.dropdown-toggle:focus {
     box-shadow: none !important;
 }
 
