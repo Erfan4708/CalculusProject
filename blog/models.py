@@ -14,6 +14,7 @@ class Post(models.Model):
     favorite = models.BooleanField(default=False)
     # users_like = models.ManyToManyField(User , related_name="users_like")
     html_content = models.TextField(blank=True)
+    html_content_grad = models.TextField(blank=True)
 
     def __str__(self):
         return self.title
