@@ -53,12 +53,16 @@
 
                                 {#                                {% endif %}#}
                             </div>
+                            <div class="text-center">
+                    {{ post.html_content_grad|safe }}
+                </div>
                         {% else %}
                             <span class="caption">| You must log in to your account to save a post to favorites.  </span>
                             <a href="{% url 'login' %}">login</a> | <a href="{% url 'signup' %}">signup</a>
                         {% endif %}
                     </div>
                 </div>
+
             </main>
         </div>
     </div>
