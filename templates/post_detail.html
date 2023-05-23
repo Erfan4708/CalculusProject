@@ -19,59 +19,37 @@
                     </div>
                 </div>
             {% endfor %}
-
             <main class="tm-main">
                 <div class="text-center">
-                    {{ post.html_content|safe }}
+                        {{ post.html_content_grad|safe }}
                 </div>
                 <div class="col-lg-6" style="margin: auto">
                     <div class="mb-5">
                         <h1 style="font-size: xxx-large" class="font-weight-bold">{{ post.title|capfirst }}</h1>
 
-                        <p dir = rtl>
+                        <p dir="rtl">
                             {{ post.information_text|linebreaks }}
                         </p>
 
+                        <div class="align-content-end" style="margin-left: -370px;">
+                            {{ post.html_content|safe }}
+                        </div>
+
                         {% if user.is_authenticated %}
                             <div class="subscribe_text font-weight-bold">
-                                {#                                {% if user.is_authenticated %}#}
                                 {% for post_ in post_f %}
-                                    {#                                        {% if post_.post.id == post.id %}#}
                                     <p>ssss</p>
-                                    {#                                        {% endif %}#}
                                 {% endfor %}
-
                                 <a href="{% url 'blog:add_favorite' user.username post.id %}">Add to favorites</a>
                                 <br>
-{#                                <form method="POST" action="{% url 'blog:rem_favorite' post.id %}">#}
-{#                                    {% csrf_token %}#}
-{#                                    <button type="submit" class="btn btn-danger">Remove from Favorites</button>#}
-{#                                </form>#}
-
-{#                                <a href="{% url 'blog:rem_favorite' post.id %}">Remove from favorites</a>#}
-
-
-                                {#                                {% endif %}#}
                             </div>
-
                         {% else %}
                             <span class="caption">| You must log in to your account to save a post to favorites.  </span>
                             <a href="{% url 'login' %}">login</a> | <a href="{% url 'signup' %}">signup</a>
                         {% endif %}
                     </div>
-                <div class="text-center">
-                    {{ post.html_content_grad|safe }}
                 </div>
-                </div>
-
             </main>
         </div>
     </div>
 {% endblock content %}
-
-
-
-
-
-
-
