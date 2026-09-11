@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-{% block page_title %}
-    Log In
-{% endblock page_title %}
+{% block title %}Log In{% endblock title %}
 
 {% block content %}
     <div class="barber_section layout_padding">
@@ -13,11 +11,6 @@
                     {% csrf_token %}
                     <h1 class="text-center subscribe_text" style="color: black">Log In</h1>
                     {{ form|crispy }}
-                    <div class="d-flex justify-content-between align-items-center">
-{#                        <div class="mt-2">#}
-{#                            <a class="text-decoration-none" href="{% url 'password_reset' %}">Forget password</a>#}
-{#                        </div>#}
-                    </div>
                     <button style="background-color: #727272" type="submit" class="btn btn-success mt-3 w-100">LogIn</button>
                     <div class="line-with-middle-sep text-center">
                                   <span>
@@ -33,12 +26,3 @@
     </div>
 
 {% endblock content %}
-
-
-
-{##}
-{#           {% for post in post_f %}#}
-{#                    {% if post.user.username ==  user.username %}#}
-{#                        <p>{{ post.post.title }}</p>#}
-{#                    {% endif %}#}
-{#                {% endfor %}#}

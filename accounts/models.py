@@ -1,8 +1,3 @@
-# from django.db import models
-# from django.contrib.auth.models import AbstractUser
-# # Create your models here.
-#
-# class CustomUser(AbstractUser):
-#     age = models.PositiveIntegerField(null=True , blank = True)
+from django.db import models
 
-
+# The app uses Django's built-in User model, so there are no custom models here.

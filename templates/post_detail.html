@@ -1,6 +1,4 @@
 {% extends 'base.html' %}
-{% load static %}
-{% load crispy_forms_tags %}
 
 {% block title %}{{ post.title }}{% endblock %}
 
@@ -21,6 +19,7 @@
             {% endfor %}
 
             <main class="tm-main">
+                {# html_content is written by staff in the admin and may contain scripts (e.g. a 3D plot). #}
                 <div class="text-center">
                     {{ post.html_content|safe }}
                 </div>
@@ -33,24 +32,8 @@
 
                         {% if user.is_authenticated %}
                             <div class="subscribe_text font-weight-bold">
-                                {#                                {% if user.is_authenticated %}#}
-                                {% for post_ in post_f %}
-                                    {#                                        {% if post_.post.id == post.id %}#}
-                                    <p>ssss</p>
-                                    {#                                        {% endif %}#}
-                                {% endfor %}
-
-                                <a href="{% url 'blog:add_favorite' user.username post.id %}">Add to favorites</a>
+                                <a href="{% url 'blog:add_favorite' post.id %}">Add to favorites</a>
                                 <br>
-{#                                <form method="POST" action="{% url 'blog:rem_favorite' post.id %}">#}
-{#                                    {% csrf_token %}#}
-{#                                    <button type="submit" class="btn btn-danger">Remove from Favorites</button>#}
-{#                                </form>#}
-
-{#                                <a href="{% url 'blog:rem_favorite' post.id %}">Remove from favorites</a>#}
-
-
-                                {#                                {% endif %}#}
                             </div>
                         {% else %}
                             <span class="caption">| You must log in to your account to save a post to favorites.  </span>
